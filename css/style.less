@@ -157,6 +157,26 @@ a {
 	.slider {
 		width: 100%;
 		height: 100%;
+		position: relative;
+
+		.fotorama__arrow {
+			position: absolute;
+			top: 57%;
+			transform: translateY(-50%);
+			width: 31px;
+			height: 53px;
+		}
+
+		.fotorama__arrow--prev {
+			background: url(../img/icon-arrow-prev-light.png);
+			left: 0;
+			
+		}
+
+		.fotorama__arrow--next {
+			background: url(../img/icon-arrow-next-light.png);
+			right: 0;
+		}
 
 		&__item {
 
