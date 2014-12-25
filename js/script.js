@@ -31,7 +31,6 @@ function sliderInit(_ID, BLOCK) {
 		.append(createSwitcher([ELEM_ARROW, MOD_ARROW_PREV].join(' '), '<'))
 		.append(createSwitcher([ELEM_ARROW, MOD_ARROW_NEXT].join(' '), '>'))
 		.on('click', '.' + ELEM_ARROW, function() {
-			console.log($(this).data('show-param'));
 			$fotorama.data('fotorama').show($(this).data('show-param'));
 		});
 }
@@ -44,16 +43,29 @@ $(function() {
 
 //templates and rendering
 
+var estate = [
+	{
+		src: 'img/rooms-1.jpg',
+		title: 'Квартира-студия',
+		description: 'Однокомнатная квартира-студия, 50м², возле станции метро «Выхино». Цена 10000000 рублей.'
+	},
+	{
+		src: 'img/rooms-2.jpg',
+		title: 'Загородный дом',
+		description: 'Загородный дом с пятью комнатнами, 200м², 10км от МКАД. Цена 15000000 рублей.'
+	}
+];
+
 function createPartners() {
 	return $('<div/>', {'class': 'list__item'})
 		.append($('<img/>', {'src': 'img/epic-logo.png'}));
 };
 
-function createGallery() {
+function createGallery(data) {
 	return $('<div/>', {'class': 'gallery__item'})
-		.append($('<img/>', {'src': 'img/rooms.jpg'}))
-		.append($('<span/>').text('Квартира-студия'))
-		.append($('<span/>').text('Однокомнатная квартира-студия, 50м², возле станции метро «Выхино». Цена 10 000 000 рублей.'))
+		.append($('<img/>', {'src': data.src}))
+		.append($('<span/>').text(data.title))
+		.append($('<span/>').text(data.description))
 };
 
 function renderPartners() {
@@ -62,15 +74,36 @@ function renderPartners() {
 	}
 };
 
-function renderGallery() {
+function renderGallery(item) {
+	$('.gallery').empty();
+	console.log(item);
 	for (var i = 0; i < 8; i++) {
-		$('.gallery').append(createGallery());
+		$('.gallery').append(createGallery(item));
 	}
 };
 
 $(function() {
-	renderGallery();
+	renderGallery(estate[1]);
 	renderPartners();
+});
+
+//just imitation of changing gallery's content
+$('.options').on('change', 'input', function() {
+	var checked = $(this).prop('id');
+	if(checked == "rent" || checked == "suburb") {
+		renderGallery(estate[0]);
+	}
+	else {
+		renderGallery(estate[1]);
+	}
+});
+
+$('.button-all').on('click', function(){
+	$('.gallery').empty();
+	for (var i = 0; i < 16; i++) {
+		var item = estate[i%2];
+		$('.gallery').append(createGallery(item));
+	}
 });
 
 
