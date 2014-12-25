@@ -82,19 +82,20 @@ a {
 
 	.header {
 		background: @color-gray-light;
-		position: relative;
-		top: 15px;
+		position: fixed;
+		z-index: 10;
+		width: 100%;
 		height: 66px;
 		box-sizing: border-box;
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: -5px;
-			width: 100%;
-			height: 4px;
-			background: url(../img/decor-lines.png);
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: -5px;
+		// 	width: 100%;
+		// 	height: 4px;
+		// 	background: url(../img/decor-lines.png);
+		// }
 
 		&:after {
 			content: '';
@@ -348,8 +349,63 @@ a {
 		}
 	}
 
-	img {
-		margin: 55px 0 30px 0;
+	input:checked + label {
+		background: @color-navy-medium;
+		color: @color-white;
+	}
+
+	.button-all {
+		font-size: 18px;
+		font-family: CalibriLight;
+		background: @color-navy-medium;
+		color: @color-white;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 5px 15px 0 15px;
+		margin-bottom: 30px;
+		cursor: pointer;
+		border: 1px solid @color-navy-medium;
+		box-sizing: border-box;
+
+		&:hover {
+			background: @color-white;
+			color: @color-navy-medium;
+		}
+	}
+
+	.gallery {
+		margin-top: 60px;
+
+		&__item {
+			width: 200px;
+			margin-bottom: 30px;
+			display: inline-block;
+
+			&:not(:nth-child(4n)) {
+				margin-right: 25px;
+			}
+
+			img {
+				width: 90%;
+				margin-bottom: 10px;
+			}
+			
+			span:first-of-type {
+				display: block;
+				font-size: 18px;
+				font-family: BebasNeueBold;
+				color: @color-navy-medium;
+				text-transform: uppercase;
+			}
+
+			span:last-of-type {
+				display: block;
+				font-size: 12px;
+				font-family: CalibriLight;
+				color: @color-navy-medium;
+			}
+		}
+
 	}
 }
 
