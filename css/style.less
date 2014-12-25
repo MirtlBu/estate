@@ -75,6 +75,14 @@ a {
 	margin: 0 auto;
 }
 
+.fotorama__wrap {
+	margin: 0 auto;
+}
+
+.fotorama__arr:focus, .fotorama__fullscreen-icon:focus, .fotorama__nav__frame {
+	outline: none;
+}
+
 .estate {
 	width: 100%;
 	height: 670px;
@@ -159,23 +167,36 @@ a {
 		height: 100%;
 		position: relative;
 
+		.fotorama__nav__frame--dot {
+			width: 17px;
+			height: 17px;
+			background: url(../img/icon-circle.png) 0 no-repeat;
+			margin-right: 5px;
+		}
+
+		.fotorama__dot {
+			display: none;
+		}
+
 		.fotorama__arrow {
 			position: absolute;
 			top: 57%;
 			transform: translateY(-50%);
 			width: 31px;
 			height: 53px;
+			outline: 0;
+			cursor: pointer;
 		}
 
 		.fotorama__arrow--prev {
 			background: url(../img/icon-arrow-prev-light.png);
-			left: 0;
+			left: -40px;
 			
 		}
 
 		.fotorama__arrow--next {
 			background: url(../img/icon-arrow-next-light.png);
-			right: 0;
+			right: -40px;
 		}
 
 		&__item {
@@ -445,6 +466,27 @@ a {
 		width: 100%;
 		height: 4px;
 		background: url(../img/decor-lines-2.png);
+	}
+
+	.fotorama__arrow {
+		position: absolute;
+		top: 40%;
+		transform: translateY(-50%);
+		width: 17px;
+		height: 29px;
+		outline: 0;
+		cursor: pointer;
+	}
+
+	.fotorama__arrow--prev {
+		background: url(../img/icon-arrow-prev.png);
+		left: -40px;
+		
+	}
+
+	.fotorama__arrow--next {
+		background: url(../img/icon-arrow-next.png);
+		right: -40px;
 	}
 
 	.title {

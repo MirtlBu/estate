@@ -14,8 +14,6 @@ $(function() {
 
 	var $fotorama = $('.' + BLOCK)
 		.fotorama({
-			width: 820,
-			height: 560,
 			loop: true,
 			keyboard: true,
 			swipe: true,
@@ -29,7 +27,6 @@ $(function() {
 		.append(createSwitcher([ELEM_ARROW, MOD_ARROW_NEXT].join(' '), '>'))
 		.on('click', '.' + ELEM_ARROW, function() {
 			$fotorama.data('fotorama').show($(this).data('show-param'));
-			addActive($fotorama.data('fotorama'));
 		});
 });
 
