@@ -78,7 +78,7 @@ a {
 .estate {
 	width: 100%;
 	height: 670px;
-	background: url(../img/bg-1.jpg);
+	background: url(../img/bg-1.jpg) 100% / cover no-repeat;
 
 	.header {
 		background: @color-gray-light;
@@ -233,7 +233,7 @@ a {
 
 .steps {
 	width: 100%;
-	background: url(../img/bg-2.jpg);
+	background: url(../img/bg-2.jpg) 100% / cover no-repeat;
 	text-align: center;
 	position: relative;
 	padding-top: 40px;
@@ -461,7 +461,7 @@ a {
 }
 
 .graph {
-	background: url(../img/bg-3.jpg);
+	background: url(../img/bg-3.jpg) 100% / cover no-repeat;
 	width: 100%;
 	position: relative;
 	padding: 40px 0 60px 0;
@@ -593,7 +593,7 @@ a {
 	width: 100%;
 	height: 425px;
 	position: relative;
-	background: url(../img/bg-4.jpg);
+	background: url(../img/bg-4.jpg) 100% / cover no-repeat;
 
 	&:before {
 		content: '';
@@ -716,9 +716,9 @@ a {
 	width: 100%;
 	height: 480px;
 	position: relative;
-	background: url(../img/bg-5.jpg);
+	background: url(../img/bg-5.jpg) 50% / cover no-repeat;
 	text-align: center;
-	position: relative;
+	z-index: 0;
 
 	&:before {
 		content: '';
@@ -730,15 +730,29 @@ a {
 		background: url(../img/decor-lines-2.png);
 	}
 
+	&:after {
+		content: '';
+		position: absolute;
+		width: 800px;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: rgba(0, 0, 0, 0.2);
+		z-index: -1;
+	}
+
 	.wrap {
 		position: relative;
 
 		&:before {
 			content: '';
 			position: absolute;
-			background: @color-white;
+			background: @color-gray-light;
 			width: 220px;
-			height: 100%;
+			height: 101%;
+			top: -4px;
 			right: 40px;
 		}
 	}
@@ -750,7 +764,7 @@ a {
 		display: inline-block;
 		position: relative;
 		left: 0;
-		top: 50%;
+		top: 20%;
 		transform: translateY(-50%);
 		-webkit-font-smoothing: antialiased;
 
@@ -774,7 +788,7 @@ a {
 		display: inline-block;
 		padding-top: 90px;
 		box-sizing: border-box;
-		background: @color-gray-light;
+		background: #e9e9e9;
 		position: relative;
 		left: 140px;
 		top: 50%;
@@ -811,6 +825,75 @@ a {
 			box-shadow:         0px 4px 0px 0px rgba(185, 185, 185, 1);
 		}
 	}
+}
+
+footer {
+	width: 100%;
+	height: 85px;
+	position: relative;
+	background: @color-gray-light;
+	text-align: center;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: url(../img/decor-lines.png);
+	}
+
+	.logo, .logo-epic, .social {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: 25%;
+	}
+
+	.logo-epic, .social {
+		margin-right: 240px;
+	}
+
+	.logo {
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 16px;
+			font-family: BebasNeueRegular;
+			color: @color-navy-dark;
+			text-transform: uppercase;
+		}
+	}
+
+	.social {
+
+		img {
+			margin-right: 5px;
+			cursor: pointer;
+			opacity: .6;
+			-webkit-filter: grayscale(100%) contrast(0%);
+	        -moz-filter: grayscale(100%) contrast(0%);
+	        filter: grayscale(100%) contrast(0%);
+	        filter: gray;
+	        filter: url('filters.svg#grayscale');
+
+	        &:hover {
+	        	opacity: 1;
+				-webkit-filter: grayscale(0%) contrast(100%);
+		        -moz-filter: grayscale(0%) contrast(100%);
+		        filter: grayscale(0%) contrast(100%);
+		        filter: none;
+		        filter: none;
+	        }
+		}
+	}
+
 }
 
 
