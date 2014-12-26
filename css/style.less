@@ -952,40 +952,39 @@ a {
 		.top, .bottom {
 			position: absolute;
 			z-index: 0;
-
+			
 			&:before, &:after {
 				content: '';
 				position: absolute;
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				
+				width: 70px;
+				height: 70px;
+				background: #d5d6d6;
+				-webkit-transform: rotate(45deg) skew(-15deg, -15deg);
+				-o-transform: rotate(45deg) skew(-15deg, -15deg);
+				transform: rotate(45deg) skew(-15deg, -15deg);
+				z-index: -1;
 			}
 		}
 
 		.top {
-			top: 16px;
+			top: 45px;
 
 			&:before {
-				left: -159px;
-				box-shadow: 15px 15px 0 0 #d5d6d6;
+				left: -121px;
 			}
 			&:after {
-				box-shadow: -15px 15px 0 0 #d5d6d6;
-				right: -159px;
+				right: -121px;
 			}
 		}
 
 		.bottom {
-			top: 414px;
+			top: 369px;
 
 			&:before {
-				left: -159px;
-				box-shadow: 15px -15px 0 0 #d5d6d6;
+				left: -121px;
 			}
 			&:after {
-				right: -159px;
-				box-shadow: -15px -15px 0 0 #d5d6d6;
+				right: -121px;
 			}
 		}
 
