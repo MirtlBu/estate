@@ -106,4 +106,22 @@ $('.button-all').on('click', function(){
 	}
 });
 
+$(window).scroll(function(){
+
+    if ($(window).scrollTop() > 20){
+        $(".header").addClass("sticky");
+    }
+    else {
+        $(".header").removeClass("sticky");
+    }
+
+	if($(window).scrollTop() > 2100) {
+		$('.graph').find('.image').addClass('saturate');
+    }
+    else {
+    	$('.graph').find('.image').removeClass('saturate');
+    }
+
+});
+
 
