@@ -109,13 +109,17 @@ $('.button-all').on('click', function(){
 $(window).scroll(function(){
 
     if ($(window).scrollTop() > 20){
-    	console.log($(window).scrollTop());
-    	// $('.slides').addClass('debounce');
         $(".header").addClass("sticky");
-        
-    } else {
+    }
+    else {
         $(".header").removeClass("sticky");
-        // $('.slides').removeClass('debounce');
+    }
+
+	if($(window).scrollTop() > 2100) {
+		$('.graph').find('.image').addClass('saturate');
+    }
+    else {
+    	$('.graph').find('.image').removeClass('saturate');
     }
 
 });
