@@ -264,10 +264,10 @@
 			<div class="bookmark">
 				<span class="top"></span>
 				<span class="bottom"></span>
-				<form>
-					<input type="input" placeholder="Ваше имя">
-					<input type="input" placeholder="Телефон">
-					<input type="input" placeholder="Почта">
+				<form method="post" action="send_form.php">
+					<input type="input" name="name" placeholder="Ваше имя" required>
+					<input type="input" name="phone" placeholder="Телефон" required>
+					<input type="input" name="email" placeholder="Почта" required>
 					<button type="submit">Оставить заявку</button>
 				</form>	
 			</div>

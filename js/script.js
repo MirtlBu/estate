@@ -106,4 +106,18 @@ $('.button-all').on('click', function(){
 	}
 });
 
+$(window).scroll(function(){
+
+    if ($(window).scrollTop() > 20){
+    	console.log($(window).scrollTop());
+    	// $('.slides').addClass('debounce');
+        $(".header").addClass("sticky");
+        
+    } else {
+        $(".header").removeClass("sticky");
+        // $('.slides').removeClass('debounce');
+    }
+
+});
+
 
