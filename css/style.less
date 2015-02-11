@@ -13,31 +13,31 @@
 @color-graph-blue: #c7e1e3;
 @color-graph-green: #c4efd4;
 @font-face {
-    font-family: 'BebasNeueBold'; 
+    font-family: 'BebasNeueBold';
     src: url(../fonts/BebasNeueBold.ttf);
 }
 @font-face {
-    font-family: 'BebasNeueRegular'; 
+    font-family: 'BebasNeueRegular';
     src: url(../fonts/BebasNeueRegular.ttf);
 }
 @font-face {
-    font-family: 'BebasNeueThin'; 
+    font-family: 'BebasNeueThin';
     src: url(../fonts/BebasNeueThin.ttf);
 }
 @font-face {
-    font-family: 'BebasNeueLight'; 
+    font-family: 'BebasNeueLight';
     src: url(../fonts/BebasNeueLight.ttf);
 }
 @font-face {
-    font-family: 'BebasNeueBook'; 
+    font-family: 'BebasNeueBook';
     src: url(../fonts/BebasNeueBook.ttf);
 }
 @font-face {
-    font-family: 'CalibriLight'; 
+    font-family: 'CalibriLight';
     src: url(../fonts/CalibriLight.ttf);
 }
 @font-face {
-    font-family: 'CalibriLightItalic'; 
+    font-family: 'CalibriLightItalic';
     src: url(../fonts/CalibriLightItalic.ttf);
 }
 
@@ -79,6 +79,12 @@ a {
 	margin: 0 auto;
 }
 
+.block {
+    width: 100%;
+    min-width: 890px;
+    position: relative;
+}
+
 .fotorama__wrap {
 	margin: 0 auto;
 }
@@ -88,7 +94,6 @@ a {
 }
 
 .estate {
-	width: 100%;
 	height: 670px;
 	background: url(../img/bg-1.jpg) 100% / cover no-repeat;
 
@@ -182,7 +187,7 @@ a {
 			}
 		}
 	}
-	
+
 	.fotorama__nav__frame--dot {
 		width: 17px;
 		height: 17px;
@@ -228,7 +233,7 @@ a {
 				height: 125px;
 				text-align: center;
 				position: relative;
-				top: 300px; 
+				top: 300px;
 				cursor: pointer;
 			}
 
@@ -260,8 +265,6 @@ a {
 }
 
 .quote {
-	width: 100%;
-	position: relative;
 	text-align: center;
 	background: @color-gray-light;
 	padding: 40px 0 40px;
@@ -299,10 +302,8 @@ a {
 }
 
 .steps {
-	width: 100%;
 	background: url(../img/bg-2.jpg) 100% / cover no-repeat;
 	text-align: center;
-	position: relative;
 	padding-top: 40px;
 
 	&:before {
@@ -363,10 +364,8 @@ a {
 }
 
 .options {
-	width: 100%;
 	background: @color-gray-light;
 	text-align: center;
-	position: relative;
 	padding-top: 40px;
 
 	&:before {
@@ -455,7 +454,7 @@ a {
 				width: 90%;
 				margin-bottom: 10px;
 			}
-			
+
 			span:first-of-type {
 				display: block;
 				font-size: 18px;
@@ -478,9 +477,7 @@ a {
 }
 
 .analitics, .reviews{
-	width: 100%;
 	text-align: center;
-	position: relative;
 	padding: 40px 0 60px 0;
 
 	&:before {
@@ -508,7 +505,7 @@ a {
 	.fotorama__arrow--prev {
 		background: url(../img/icon-arrow-prev.png);
 		left: -40px;
-		
+
 	}
 
 	.fotorama__arrow--next {
@@ -589,7 +586,7 @@ a {
 			display: block;
 			padding: 20px 0 15px 0;
 			border-top: 1px solid rgba(44, 62, 80, 0.3);
-			border-bottom: 1px solid rgba(44, 62, 80, 0.3); 
+			border-bottom: 1px solid rgba(44, 62, 80, 0.3);
 		}
 
 		span:nth-child(2) {
@@ -613,8 +610,6 @@ a {
 
 .graph {
 	background: url(../img/bg-3.jpg) 100% / cover no-repeat;
-	width: 100%;
-	position: relative;
 	padding: 40px 0 60px 0;
 
 	&:before {
@@ -740,7 +735,7 @@ a {
 		margin-bottom: 10px;
 
 		div {
-			width: 15px; 
+			width: 15px;
 			height: 15px;
 			display: inline-block;
 			vertical-align: middle;
@@ -804,9 +799,7 @@ a {
 }
 
 .info {
-	width: 100%;
 	height: 425px;
-	position: relative;
 	background: url(../img/bg-4.jpg) 100% / cover no-repeat;
 
 	&:before {
@@ -852,11 +845,8 @@ a {
 }
 
 .partners {
-	width: 100%;
-	position: relative;
 	background: @color-gray-light;
 	text-align: center;
-	position: relative;
 	padding: 40px 0 60px 0;
 
 	&:before {
@@ -931,9 +921,7 @@ a {
 }
 
 .feedback {
-	width: 100%;
 	height: 480px;
-	position: relative;
 	background: url(../img/bg-5.jpg) 50% / cover no-repeat;
 	text-align: center;
 	z-index: 0;
@@ -1015,7 +1003,7 @@ a {
 		.top, .bottom {
 			position: absolute;
 			z-index: 0;
-			
+
 			&:before, &:after {
 				content: '';
 				position: absolute;
@@ -1103,9 +1091,7 @@ a {
 }
 
 footer {
-	width: 100%;
 	height: 85px;
-	position: relative;
 	background: @color-gray-light;
 	text-align: center;
 
